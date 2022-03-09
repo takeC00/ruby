@@ -17,7 +17,9 @@ if memo_type === "1\n"
   
 elsif memo_type === "2\n"
   puts "メモ編集"
-  p CSV.read("memo_title.csv")
+  puts "編集したいファイル名を拡張子除いて入力してください"
+  memo_title = gets.to_s
+  p CSV.read("#{memo_title}.csv")
 else 
   puts "エラー！！正しい番号を入力してください"
 end
